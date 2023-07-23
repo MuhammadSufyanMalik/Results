@@ -1,12 +1,21 @@
-﻿namespace Results
+﻿using System.Net;
+
+namespace Results
 {
     public class ErrorResult : Result
     {
-        public ErrorResult(string message) : base(false, message)
+        public ErrorResult(string messageTranslateKey, HttpStatusCode statusCode)
+            : base(success: false, messageTranslateKey, statusCode)
         {
         }
 
-        public ErrorResult() : base(false)
+        public ErrorResult(string message)
+            : base(success: false, message)
+        {
+        }
+
+        public ErrorResult()
+            : base(success: false)
         {
         }
     }

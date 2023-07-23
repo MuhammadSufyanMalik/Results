@@ -1,9 +1,12 @@
-﻿namespace Results
+﻿using System.Net;
+
+namespace Results
 {
-    // Tmel Voidler için başlangıç
     public interface IResult
     {
         bool Success { get; }
         string Message { get; }
+        string MessageTranslateKey { get; set; }
+        HttpStatusCode? StatusCode { get; set; }
     }
 }
