@@ -10,7 +10,7 @@
     <Description>Using Result Package you can easily use IResult and IDataResult and IPagingResult for method return type.
 1.0.1 =&gt;  also contain StatusCode and MessageKey options</Description>
     <PackageTags>Result,IResult,IDataResult,IPagingResult</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageReleaseNotes>Updated Results added StatusCode and TranslateKey</PackageReleaseNotes>
     <PackAsTool>False</PackAsTool>
   </PropertyGroup>
