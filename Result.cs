@@ -4,8 +4,14 @@ namespace Results
 {
     public class Result : IResult
     {
-        public Result(bool success, string messageTranslateKey, HttpStatusCode statusCode)
-       : this(success, messageTranslateKey)
+        public bool Success { get; }
+
+        public string Message { get; set; }
+
+        public string MessageTranslateKey { get; set; }
+
+        public HttpStatusCode? StatusCode { get; set; }
+        public Result(bool success, string messageTranslateKey, HttpStatusCode statusCode) : this(success, messageTranslateKey)
         {
             StatusCode = statusCode;
             MessageTranslateKey = messageTranslateKey;
@@ -21,12 +27,5 @@ namespace Results
         {
             Success = success;
         }
-        public bool Success { get; }
-
-        public string Message { get; }
-
-        public string MessageTranslateKey { get; set; }
-
-        public HttpStatusCode? StatusCode { get; set; }
     }
 }
